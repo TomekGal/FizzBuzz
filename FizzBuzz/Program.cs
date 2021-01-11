@@ -27,17 +27,15 @@ namespace FizzBuzz
                 var liczbaint = int.Parse(liczba);
 
                 
-                var checkdigit = new CheckDigit(liczbaint);
-                var number = checkdigit.Check();
+                var checkdigit = new CheckDigit();
+                var number = checkdigit.Check(liczbaint);
+           
 
-                if ((liczbaint  % 3) != 0 && (liczbaint % 5) != 0)
-                {
+                
                     Console.WriteLine("");
                     Console.WriteLine(number);
                     Console.WriteLine("Podana liczba nie dzieli się przez 3 i 5 bez reszty");
-
-                }
-                
+                                            
             }
 
 

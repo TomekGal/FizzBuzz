@@ -9,33 +9,38 @@ namespace FizzBuzz
     class CheckDigit
     {
         private int _digit;
-
-        public CheckDigit(int digit)
+       
+        public CheckDigit()
         {
-            _digit = digit;
            
 
         }
-        public string Check()
+        public string Check(int digit)
         {
+            string number;
+            _digit = digit;
 
-            if ((_digit % 3)==0 && (_digit % 5) == 0)
+            if (_digit % 3 == 0 && _digit % 5 == 0)
             {
-                Console.WriteLine("FizzBuzz");
-            }
-          
-            else if ((_digit % 3) == 0)
-            {
-                Console.WriteLine("Fizz");
-            }
-            else if ((_digit % 5) == 0)
-            {
-                Console.WriteLine("Buzz");
-
+                 return "FizzBuzz"; 
             }
 
-            string number = _digit.ToString();
-            return number;
+            else if (_digit % 3 == 0)
+            {
+                return "Fizz";
+            }
+            else if (_digit % 5 == 0)
+            {
+                return "Buzz";
+
+            }
+            else if (_digit % 3 != 0 && _digit % 5 != 0)
+            {
+                
+               return number = _digit.ToString();
+            }
+
         }
+        
     }
 }
